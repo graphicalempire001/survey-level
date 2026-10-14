@@ -13,7 +13,7 @@ from .db import insert_golden_example
 load_dotenv()
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = "gemini-3.8-flash"
 
 
 def extract_text_from_pdf(pdf_bytes: bytes) -> str:

@@ -70,23 +70,25 @@ Every conversation is saved. Later you can mark good answers and promote them in
 ## Admin: Adding New Knowledge via PDF
 
 1. Set a strong `ADMIN_PASSWORD` in your `.env`.
-2. In Telegram, upload a PDF.
-3. In the **caption** of the PDF write:
+2. In Telegram, **upload a PDF**.
+3. **Reply** to that PDF message with:
 
 ```
-admin yourpassword topic: Computer Science
+/add yourpassword Computer Science
 ```
 
 or
 
 ```
-admin yourpassword topic: Microelectronics
+/add yourpassword Microelectronics
 ```
 
 4. The bot will:
    - Check the password
    - Extract all text from the PDF
-   - Ask Gemini to structure it as a golden example (prompt + step-by-step + final answer)
+   - Ask Gemini to structure it as a golden example
    - Save it into the `golden_examples` table under the topic you specified
 
 The new knowledge is immediately available for future answers.
+
+You can also open the clean menu with `/menu`.

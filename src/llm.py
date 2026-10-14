@@ -9,8 +9,8 @@ load_dotenv()
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-# Use the strongest free vision model currently available
-MODEL_NAME = "gemini-2.0-flash"   # or "gemini-1.5-flash" / "gemini-2.5-flash" depending on availability
+# Current free strong vision model (Oct 2026)
+MODEL_NAME = "gemini-3.8-flash"
 
 
 def build_prompt(user_text: str, examples: List[dict]) -> str:
